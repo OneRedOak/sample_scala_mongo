@@ -8,6 +8,8 @@ libraryDependencies += "junit" % "junit" % "4.5"
 
 libraryDependencies +="org.scalatest" % "scalatest_2.10" % "2.0.RC2" % "test"
 
+libraryDependencies += "org.mongodb" %% "casbah" % "2.5.0"
+
 testOptions in Test <+= (target in Test) map {
   t => Tests.Argument(TestFrameworks.ScalaTest, "junitxml(directory=\"%s\")" format (t / "../shippable/testresults"))
 }

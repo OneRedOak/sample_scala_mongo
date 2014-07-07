@@ -7,11 +7,10 @@ import org.junit.Test
 class TestStuff extends JUnitSuite {
  val calc = new HelloWorld
 
- @ Test def oneIsOne {
-    assertEquals(1, calc square 1)
-  }
-
-  @ Test def twoIsTwo {
-    assertEquals(6, calc multiple (2,3))
+ @ Test def readHelloWorld {
+ 	//val result: Boolean = calc.returnValue("hello").indexOfSlice("world") >= 0
+ 	//val result: Boolean = calc.returnValue("hello") > 0
+ 	val result: Long = calc.returnValue("hello")
+    assertEquals(1, result.toInt)
   }
 }
